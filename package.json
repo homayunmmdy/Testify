@@ -1,18 +1,51 @@
 {
-  "name": "hamsterjs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nexca",
+  "version": "1.4.0",
+  "description": "Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.",
+  "private": true,
+  "repository": {
+    "url": "git+https://github.com/homayunmmdy/Nexca.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "typescript": "^5.5.4"
+    "axios": "^1.7.5",
+    "daisyui": "^4.12.10",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.3",
+    "next": "14.2.6",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-toastify": "^10.0.5"
   },
+  "author": "homayunmmdy",
   "devDependencies": {
-    "vitest": "^2.0.5"
+    "@faker-js/faker": "^8.4.0",
+    "@mswjs/data": "^0.16.1",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^15.0.6",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^1.2.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "jsdom": "^24.0.0",
+    "msw": "^2.1.6",
+    "postcss": "^8",
+    "resize-observer-polyfill": "^1.5.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "vitest": "^1.2.2"
   }
 }
