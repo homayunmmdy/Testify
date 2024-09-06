@@ -11,6 +11,7 @@ const Form: React.FC = () => {
           type="text"
           placeholder="please enter your name"
           required
+          autoFocus
           className="input input-bordered mb-4"
         />
         <input

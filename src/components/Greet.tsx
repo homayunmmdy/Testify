@@ -26,6 +26,7 @@ const Greet = () => {
           className="input input-bordered mr-2"
           placeholder="Enter Your Name"
           type="text"
+          autoFocus
         />
         <button className="btn btn-primary" disabled={!user} type="submit">
           Submit

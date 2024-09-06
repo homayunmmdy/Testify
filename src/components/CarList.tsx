@@ -23,6 +23,7 @@ const CarList: React.FC = () => {
           placeholder="search"
           onChange={handleChange}
           type="search"
+          autoFocus
         />
         <table className="table table-zebra">
           <thead>

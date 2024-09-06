@@ -41,4 +41,10 @@ describe("CarList Components", () => {
 
     expect(screen.getByText(/not found/i)).toBeInTheDocument()
   });
+
+  it('should focus on search input when page is loaded', () => {
+    const { searchInput } = componentHelper();
+
+    expect(searchInput).toHaveFocus()
+  });
 });

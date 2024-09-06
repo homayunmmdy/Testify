@@ -10,7 +10,7 @@ describe("Greet Components", () => {
     return {
       input: screen.getByPlaceholderText(/name/i),
       submitBtn: screen.getByRole("button", { name: /submit/i }),
-      user: userEvent.setup()
+      user: userEvent.setup(),
     };
   };
 
@@ -30,14 +30,20 @@ describe("Greet Components", () => {
     expect(submitBtn).toBeEnabled();
   });
 
-  it('should show user name on toast when user submit their name',async () => {
+  it("should show user name on toast when user submit their name", async () => {
     const { input, submitBtn, user } = componetnsHelper();
 
-    await user.type(input , 'John');
+    await user.type(input, "John");
     await user.click(submitBtn);
 
-    expect(screen.getByText('Hi John')).toBeInTheDocument();
+    expect(screen.getByText("Hi John")).toBeInTheDocument();
     expect(submitBtn).toBeDisabled();
-    expect(input).toHaveValue('');
-  })
+    expect(input).toHaveValue("");
+  });
+
+  it("should focus on Input when the page is loaded", () => {
+    const { input } = componetnsHelper();
+
+    expect(input).toHaveFocus();
+  });
 });
