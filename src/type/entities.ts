@@ -7,4 +7,5 @@ export type CountriesType = {
   id: number;
   name: string;
   continents: string;
+  taxRate: number;
 };
