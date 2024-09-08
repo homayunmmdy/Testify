@@ -1,24 +1,35 @@
 import React from "react";
 import Form from "../../src/components/Form";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Form Components", () => {
   const renderComponents = () => {
     render(<Form />);
 
     return {
-      nameInput: screen.getByPlaceholderText(/name/i),
-      ageInput: screen.getByPlaceholderText(/age/i),
-      submitBtn: screen.getByRole("button", { name: /submit/i }),
-      textarea: screen.getByPlaceholderText(/about/i),
-      toggle: screen.getByTestId("remember"),
-      checkbox: screen.getByTestId("privaicyPolicy"),
-      combobox: screen.getByRole("combobox"),
+      fileds: () => {
+        return {
+          nameInput: screen.getByPlaceholderText(/name/i),
+          ageInput: screen.getByPlaceholderText(/age/i),
+          submitBtn: screen.getByRole("button", { name: /submit/i }),
+          textarea: screen.getByPlaceholderText(/about/i),
+          toggle: screen.getByTestId("remember"),
+          checkbox: screen.getByTestId("privaicyPolicy"),
+          combobox: screen.getByRole("combobox"),
+        };
+      },
+      user: userEvent.setup()
     };
   };
 
+  const minAge = 18;
+  const maxAge = 99
+
   it("should render the default form.", () => {
-    const element = renderComponents();
+    const { fileds } = renderComponents();
+
+    const element = fileds();
 
     expect(element.nameInput).toBeInTheDocument();
     expect(element.nameInput).toBeRequired();
@@ -32,7 +43,9 @@ describe("Form Components", () => {
   });
 
   it("should focus on name filed when page is loaded", () => {
-    const { nameInput } = renderComponents();
+    const { fileds } = renderComponents();
+
+    const {nameInput} = fileds();
 
     expect(nameInput).toHaveFocus();
   });
