@@ -9,3 +9,8 @@ export type CountriesType = {
   continents: string;
   taxRate: number;
 };
+
+export type CommentsType = {
+  name : string,
+  message: string
+}

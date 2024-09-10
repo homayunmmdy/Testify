@@ -1,4 +1,4 @@
-import { CarType, CountriesType } from "@/type/entities";
+import { CarType, CommentsType, CountriesType } from "@/type/entities";
 
 export const Cars: CarType[] = [
   { id: 1, name: "Mercedes" },
@@ -16,4 +16,19 @@ export const Countries: CountriesType[] = [
   { id: 5, name: "Germany", continents: "Europe", taxRate: 0.4 },
   { id: 6, name: "Netherland", continents: "Europe", taxRate: 0.25 },
   { id: 7, name: "Sweden", continents: "Europe", taxRate: 0.35 },
+];
+
+export const Comments: CommentsType[] = [
+  { name: "John", message: "This is the first comment." },
+  { name: "John", message: "Second comment is here." },
+  { name: "John", message: "Third comment is here." },
+  { name: "John", message: "Fourth comment is here." },
+  { name: "John", message: "Fifth comment is here." },
+  { name: "John", message: "Sixth comment is here." },
+  { name: "John", message: "Seventh comment is here." },
+  { name: "John", message: "Eight comment is here." },
+  { name: "John", message: "Ninth comment is here." },
+  { name: "John", message: "Tenth comment is here." },
+  { name: "John", message: "Eleventh comment is here." },
+  { name: "John", message: "Twelfth comment is here." },
 ];
