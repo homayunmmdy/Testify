@@ -1,9 +1,6 @@
-# Nexca
+# Testify
 
-![353180851-98ac4f61-fb74-49d1-90c1-556db79f0494](https://github.com/user-attachments/assets/9248320b-d279-44c6-a702-92d1f0905db5)
-
-
-Nexca is your go-to platform for creating powerful admin panels. Manage data, share thoughts, and connect with your audience easily, whether you're an agency or an individual looking to build your brand.
+This repository offers a collection of detailed testing examples using Vitest, React Testing Library, and MSW. It includes a variety of components and pages designed to help developers write more effective and robust tests. Whether you're looking for inspiration or a solid foundation in testing React applications, Testify provides practical example
 
 
 ## Getting Started
@@ -16,29 +13,18 @@ Before you begin, ensure you have met the following requirements:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/homayunmmdy/nexca.git
+   git clone https://github.com/homayunmmdy/Testify.git
    ```
    
 2. **Navigate to the project directory:**
    ```bash
-   cd nexca
+   cd Testify
    ```
 
 3. **Install the dependencies:**
    ```bash
    npm install
    ```
-
-### Configuration
-
-1. **Copy the sample environment file and rename it:**
-   ```bash
-   cp .env.sample .env.local
-   ```
-
-2. **Create your own `.env` file and customize the configuration as needed:**
-   - Open the `.env.local` file and edit the values according to your setup.
-   - Ensure all necessary environment variables are configured.
 
 ### Running the Project
 
@@ -51,9 +37,21 @@ Before you begin, ensure you have met the following requirements:
    - Open your browser and go to `http://localhost:3000` (or the port number specified in your `.env` file).
    - Enjoy the admin panel.
 
+### Running the Test
+you can run of these to see the test result
+
+1. **Start the Test:**
+   ```bash
+   npm run test
+   ```
+2. **Start the Test with UI:**
+   ```bash
+   npm run test:ui
+   ```
+
 ### Additional Information
-- For detailed usage and documentation, refer to the [project documentation or wiki](https://github.com/homayunmmdy/nexca/wiki).
-- If you encounter any issues, feel free to open an issue on the [GitHub Issues page](https://github.com/homayunmmdy/nexca/issues).
+- For detailed usage and documentation, refer to the [project documentation or wiki](https://github.com/homayunmmdy/Testify/wiki).
+
 
 ## Contributing
 If you want to contribute to this project, please follow these steps:
