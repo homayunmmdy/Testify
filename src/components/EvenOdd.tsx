@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const CheckTheNumber: React.FC = () => {
+const EvenOdd: React.FC = () => {
   const [number, setNumber] = useState(0);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,7 +17,7 @@ const CheckTheNumber: React.FC = () => {
   return (
     <>
       <Toaster />
-      <form onSubmit={handleSubmit}>
+      <form className="flex justify-center" onSubmit={handleSubmit}>
         <input
           value={number}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -36,4 +36,4 @@ const CheckTheNumber: React.FC = () => {
   );
 };
 
-export default CheckTheNumber;
+export default EvenOdd;

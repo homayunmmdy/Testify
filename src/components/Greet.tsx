@@ -17,7 +17,7 @@ const Greet = () => {
   return (
     <>
       <Toaster />
-      <form onSubmit={handleSubmit}>
+      <form className="flex justify-center" onSubmit={handleSubmit}>
         <input
           value={user}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

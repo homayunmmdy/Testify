@@ -1,11 +1,10 @@
-import React from "react";
-import { getByText, render, screen } from "@testing-library/react";
-import CheckTheNumber from "../../src/components/CheckTheNumber";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import EvenOdd from "../../src/components/EvenOdd";
 
 describe("CheckTheNumber Components", () => {
   const renderComponents = () => {
-    render(<CheckTheNumber />);
+    render(<EvenOdd />);
 
     return {
       input: screen.getByPlaceholderText(/number/i),
@@ -21,7 +20,7 @@ describe("CheckTheNumber Components", () => {
   });
   it.each([
     { senario: "even", value: 2, message: /even/i },
-    { senario: "odd", value: 1, message: /odd/i }
+    { senario: "odd", value: 1, message: /odd/i },
   ])(
     "should show toast  the is $senario  when user enter $value",
     async ({ message, value }) => {
